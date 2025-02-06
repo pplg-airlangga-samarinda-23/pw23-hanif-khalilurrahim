@@ -12,6 +12,7 @@ $rows = $koneksi->execute_query($sql)->fetch_all(MYSQLI_ASSOC);
     <title>list</title>
 </head>
 <body>
+    <a href="tambah-list.php">Tambah</a>
     <h1>Halaman LIST</h1>
     <table>
         <thead>
@@ -39,8 +40,8 @@ $rows = $koneksi->execute_query($sql)->fetch_all(MYSQLI_ASSOC);
                     <td><?=$row['tanggals']?></td>
                     <td><?=$row['alomani']?></td>
                     <td>
-                        <a href="list-edit.php?id=<?=$row['id']?>">Edit</a>
-                        <a href="list-hapus.php?id=<?=$row['id']?>">Hapus</a>
+                        <a href="edit-list.php?id=<?=$row['id']?>">Edit</a>
+                        <a href="hapus-list.php?id=<?=$row['id']?>">Hapus</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
